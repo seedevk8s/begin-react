@@ -7,10 +7,13 @@ function InputSample() {
         setText(e.target.value);
     }
 
+    const onReset = () => {
+        setText('');        // 공백으로 설정
+    }
     return (
         <div>
             <input onChange={onChange} value={text}/>      
-            <button>초기화</button>
+            <button onClick={onReset}>초기화</button>
             <div>
                 <b>값: </b>
                 {text}
