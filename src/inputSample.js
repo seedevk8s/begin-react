@@ -1,9 +1,14 @@
 import React from 'react';
 
 function InputSample() {
+
+    const onChange = (e) => {
+        console.log(e.target.value);
+    }
+
     return (
         <div>
-            <input />
+            <input onChange={onChange}/>
             <button>초기화</button>
             <div>
                 <b>값: </b>
